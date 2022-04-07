@@ -69,13 +69,16 @@ Enter same passphrase again:
 ```
 - We don’t need a passphrase, so hit enter twice
 - This should appear:
+
 ```
 Your identification has been saved in /Users/<user-name>/.ssh/id_rsa.
 
 Your public key has been saved in /Users/<user-name>/.ssh/id_rsa.pub.
 
 The key fingerprint is:
+
 ```
+
 - below this should be a key and a randomart image
 
 - If on Windows:
