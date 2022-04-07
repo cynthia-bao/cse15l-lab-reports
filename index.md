@@ -29,8 +29,8 @@ Here is a horizontal rule:
 
 `This is a piece of inline code` I think
 
-...
+```
 
 # code block
 print 'this' 'or' print 'that'
-...
+```
