@@ -11,6 +11,7 @@
 1. Go to [this website](https://sdacs.ucsd.edu/~icc/index.php) to look up your course specific account - you may need to reset your password if this is your first time logging in
 2. In VSC, click 'Terminal' then in the dropdown menu, click 'New Terminal'
 3. In the terminal, type:
+
 ```
 ssh cs15lsp22zz@ieng6.ucsd.edu
 ```
@@ -22,6 +23,7 @@ ssh cs15lsp22zz@ieng6.ucsd.edu
 
 ## Trying Some Commands
 - Both on your personal computer and on the server, try these commands:
+
 ```
 cd ~
 - change directory to home directory
@@ -41,7 +43,7 @@ cat <SomeFile(Path)>
 - reads data from file and gives content as output
 ```
 
-Example of running `ls -lat`:
+- Example of running `ls -lat`:
 ![Image](ls-lat.PNG)
 
 ## Moving Files with scp
@@ -57,6 +59,7 @@ Example of running `ls -lat`:
 ## Setting an SSH Key
 - On your computer (the client) type: `ssh-keygen`
 - This should appear:
+
 ```
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/<user-name>/.ssh/id_rsa):
@@ -79,21 +82,24 @@ The key fingerprint is:
 
 ```
 
-- below this should be a key and a randomart image
+- Below this should be a key and a randomart image
 
 - If on Windows:
 - Type:
+
 ```
 ssh-keygen -t ed25519
 ssh cs15lsp22zz@ieng6.ucsd.edu
 ```
 - Enter your password, then type:
+
 ```
 mkdir .ssh
 exit
 ```
 - (exit is to logout of the server)
 - On the client, type (filling in blanks with your own information):
+
 ``` 
 scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/authorized_keys
 ```
@@ -102,14 +108,17 @@ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/authori
 
 ## Optimizing Remote Running
 - You can put commands inside of "" to run it directly on the server and exit the server in one line! For example:
+
 ```
 ssh cs15lsp22zz@ieng6.ucsd.edu "ls lat"
 ```
 - You can also write multiple commands on the same line by using the semicolon. For example:
+
 ```
 javac <Filename>.java; java ClassName
 ```
 - You can also combine these two together. For example, to copy a file from your local directory to the server, then create a copy of that file and run it on the server in one line:
+
 ```
 scp <FileName>.java cs15lsp22zz@ieng6.ucsd.edu:~/; ssh cs15lsp22zz@ieng6.ucsd.edu "cp <Filename>.java <FileName2>.java; javac <Filename2>.java; java FileName2"
 ```
