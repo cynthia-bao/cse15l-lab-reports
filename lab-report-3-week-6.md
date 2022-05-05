@@ -24,7 +24,7 @@ In order to directly push changes into the github repositories, we need a key (p
 
 - private key stored on user account
 
-![Image](sshkeyprivuser.PNG)
+![Image](privkeyieng6.PNG)
 
 - git commands to commit and push a change to github while logged into ieng6 account
 
