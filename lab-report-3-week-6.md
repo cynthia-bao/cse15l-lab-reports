@@ -28,7 +28,9 @@ In order to directly push changes into the github repositories, we need a key (p
 
 - git commands to commit and push a change to github while logged into ieng6 account
 
-![Image]()
+![Image](gitpushieng6.PNG)
+
+- Here is the link to the result: [Resulting Commit](https://github.com/cynthia-bao/markdown-parser/commit/51ac86103dfbd95986a5370adcca89abb17dd8e5)
 
 # Copying Whole Directories with scp-r
 
