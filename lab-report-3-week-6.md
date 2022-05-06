@@ -49,6 +49,16 @@ scp -r . ieng6:markdownparse
 ![Image](ieng6compilemkdp.PNG)
 
 - Command combining scp, ;, and ssh to copy whole directory and run the tests on one line:
+
 ```
 scp -r *.java *.md lib/ ieng6:markdownparse; ssh ieng6 "cd markdownparse; javac MarkdownParse.java; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"
 ```
+- having run into some errors, I modified the command a bit into:
+
+```
+C:\Windows\System32\OpenSSH\scp.exe -r *.java *.md lib/ ieng6:markdownparse; 
+C:\Windows\System32\OpenSSH\ssh.exe ieng6 "cd markdownparse; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac MarkdownParse.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"
+```
+- which resulted in:
+
+![Image](scpssh.PNG)
