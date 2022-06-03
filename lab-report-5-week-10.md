@@ -15,7 +15,7 @@ Below are the results for test 22, as well as the expected result as shown throu
 - Neither implementation provides the correct output.
 - The expected output is `[ti*tle]`.
 - For my implementation, the bug is that when there are quotations within the parenthesis, the link should only be what is between the quotes. Additionally, backslashes (`\`) should not be included in the link.
-- After line 47 (see image below), before adding the link, we should check if there is a backslash and make sure to remove it from the string, as well as check if there are double quotes, and remove items outside of the double quotes from the link string.
+- After line 47 (see image below), before adding the link, we should check if there is a backslash and make sure to remove it from the string. We should also check if there are double quotes, and remove items outside of the double quotes from the link string.
 
 ![Image](mkdtest22.PNG)
 
